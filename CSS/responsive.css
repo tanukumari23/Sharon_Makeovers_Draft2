@@ -1,0 +1,33 @@
+/* Responsive overrides */
+@media (max-width: 1199px){
+  section{padding:5.5rem 0}
+}
+@media (max-width: 991px){
+  body{font-size:17px}
+  .hero{min-height:auto;padding:9rem 0 5rem}
+  .hero h1{font-size:2.8rem}
+  .hero-visual{transform:none;margin-top:3rem}
+  .float-el.f1{width:120px;height:120px}
+  .float-el.f3{width:140px;height:140px}
+  .navbar.scrolled{padding:.6rem 0}
+  .navbar-collapse{
+    background:rgba(255,250,242,.95);backdrop-filter:blur(20px);
+    border-radius:18px;margin-top:1rem;padding:1rem;
+  }
+  .nav-link{padding:.7rem 1rem!important}
+  section{padding:4.5rem 0}
+  .section-head{margin-bottom:2.5rem}
+  .quote-block{font-size:1.4rem;padding:3rem 1rem}
+  .quote-block::before{font-size:6rem;top:-1.5rem}
+  .page-header{padding:8rem 0 3.5rem}
+}
+@media (max-width: 576px){
+  .fab-wa{width:54px;height:54px;font-size:1.4rem;bottom:20px;right:20px}
+  .back-top{bottom:20px;left:20px;width:42px;height:42px}
+  .btn-luxe,.btn-ghost{padding:.85rem 1.8rem;font-size:.7rem}
+  .hero{padding-top:7rem}
+  .hero h1{font-size:2.3rem}
+  .hero p.lead{font-size:1.05rem}
+  .counter .num{font-size:2.5rem}
+  .feature{padding:2rem 1rem}
+}
