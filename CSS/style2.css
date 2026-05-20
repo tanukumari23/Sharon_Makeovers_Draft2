@@ -7,25 +7,23 @@
 
   /* ===== MAIN PALETTE ===== */
 
-  --lavender:#DCCFF5;
-  --lavender-dark:#C5AFE8;
+--lavender:#D9C2FF;
+--lavender-light:#EEE4FF;
+--lavender-dark:#B89AE6;
+--lavender-deep:#9B7ED3;
 
-  --pink:#F8D7E8;
-  --pink-dark:#E8B8CF;
+--pink:#F4D9EC;
 
-  --beige:#F6EEE7;
-  --beige-100:#F9F1EB;
-  --beige-200:#EADFD6;
+--beige:#F8F3FA;
 
-  --cream:#FFFDFB;
+--cream:#FFFDFF;
 
-  --rose-gold:#C89A8B;
-  --rose-gold-dark:#B67E6E;
+--gold:#B79AD6;
+--gold-dark:#9473C7;
+--gold-light:#D9C8F2;
 
-  --white:#ffffff;
-
-  --ink:#5F5566;
-  --muted:#8A7B84;
+--ink:#54495F;
+--muted:#85788F;
 
   /* fallback names */
   --gold: #C89A8B;
@@ -44,21 +42,21 @@
 
   /* ===== GRADIENTS ===== */
 
-  --grad-main:
-  linear-gradient(
-    135deg,
-    #FFFDFB 0%,
-    #F8D7E8 45%,
-    #DCCFF5 100%
-  );
+--grad-main:
+linear-gradient(
+  135deg,
+  #FCFAFF 0%,
+  #EEE6FF 45%,
+  #DCCFF5 100%
+);
 
-  --grad-soft:
-  linear-gradient(
-    135deg,
-    #FFFDFB 0%,
-    #F6EEE7 50%,
-    #F8D7E8 100%
-  );
+--grad-soft:
+linear-gradient(
+  135deg,
+  #FFFDFB 0%,
+  #F2EBFF 45%,
+  #DCCFF5 100%
+);
 
   --grad-rose:
   linear-gradient(
@@ -161,9 +159,8 @@ section{padding:7rem 0; position:relative;
   position:fixed;top:0;left:0;height:3px;width:0%;
   background:linear-gradient(
   135deg,
-  #d8a6b1,
-  #bea7ea
-);z-index:1080;transition:width .1s linear;
+ #c9b0f5,
+  #9f84db);z-index:1080;transition:width .1s linear;
 }
 
 /* ---------- Loader ---------- */
@@ -263,7 +260,7 @@ section{padding:7rem 0; position:relative;
 
   border:1px solid rgba(216,166,177,.35);
 
-  background:rgba(255,255,255,.55);
+  background:rgba(245,240,255,.62);
 
   backdrop-filter:blur(12px);
 
@@ -283,8 +280,8 @@ section{padding:7rem 0; position:relative;
    background:
     linear-gradient(
       180deg,
-      #fffdfb 0%,
-      #fdf5fa 100%
+       #fcfaff 0%,
+  #efe6ff 100%
     );display:flex;align-items:center;
   position:relative;overflow:hidden;
   padding-top:8rem;
@@ -338,7 +335,7 @@ section{padding:7rem 0; position:relative;
   border:1px solid rgba(255,255,255,.5);
 
   box-shadow:
-    0 10px 30px rgba(216,166,177,.12);
+    0 10px 30px rgba(185,155,235,.18);
 
   animation:float 8s ease-in-out infinite;
 }
@@ -466,8 +463,8 @@ section{padding:7rem 0; position:relative;
   width:70px;height:70px;border-radius:50%;
   background:linear-gradient(
   135deg,
-  #d8a6b1,
-  #bea7ea
+ #c9b0f5,
+  #9f84db
 );color:#fff;
   display:inline-flex;align-items:center;justify-content:center;
   font-size:1.6rem;margin-bottom:1.2rem;
@@ -542,7 +539,7 @@ section{padding:7rem 0; position:relative;
   overflow: hidden;
 
   background:
-    radial-gradient(circle at top left, rgba(244,212,224,.55), transparent 35%),
+    radial-gradient(circle at top left,  rgba(220,207,245,.65), transparent 35%),
     radial-gradient(circle at bottom right, rgba(232,211,164,.18), transparent 30%),
     linear-gradient(180deg,#fffafd 0%,#f8eef5 100%);
 
@@ -713,7 +710,7 @@ section{padding:7rem 0; position:relative;
 /* reach section */
 
 .footer .contact-box{
-  background:rgba(255,255,255,.55);
+  background:rgba(245,240,255,.62);
   border:1px solid rgba(255,255,255,.7);
 
   padding:1.5rem;
@@ -840,8 +837,8 @@ section{padding:7rem 0; position:relative;
 .process-step .step-num{
   width:80px;height:80px;border-radius:50%;background:linear-gradient(
   135deg,
-  #d8a6b1,
-  #bea7ea
+  #c9b0f5,
+  #9f84db
 );color:#fff;
   display:inline-flex;align-items:center;justify-content:center;
   font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:1.2rem;
@@ -923,8 +920,8 @@ section{padding:7rem 0; position:relative;
 }
 .progress-luxe .bar{height:100%;background:linear-gradient(
   135deg,
-  #d8a6b1,
-  #bea7ea
+  #c9b0f5,
+  #9f84db
 );width:0;transition:width .6s ease}
 
 /* ---------- Contact ---------- */
@@ -936,8 +933,8 @@ section{padding:7rem 0; position:relative;
 .contact-card .ico{
   width:60px;height:60px;border-radius:50%;background:linear-gradient(
   135deg,
-  #d8a6b1,
-  #bea7ea
+  #c9b0f5,
+  #9f84db
 );color:#fff;
   display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;
 }
