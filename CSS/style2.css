@@ -165,17 +165,17 @@ section{padding:7rem 0; position:relative;
 
 /* ---------- Loader ---------- */
 .loader{
-  position:fixed;inset:0;background:#fffdfb;z-index:2000;
+  position:fixed;inset:0;background:#EEE4FF;z-index:2000;
   display:flex;align-items:center;justify-content:center;flex-direction:column;
   transition:opacity .8s ease, visibility .8s ease;
 }
 .loader.hidden{opacity:0;visibility:hidden}
 .loader-ring{
   width:60px;height:60px;border-radius:50%;
-  border:2px solid var(--beige-200);border-top-color:var(--gold);
+  border:2px solid var(--beige);border-top-color:var(--gold);
   animation:spin 1s linear infinite;
 }
-.loader-text{margin-top:1rem;letter-spacing:.5em;font-family:'Jost',sans-serif;font-size:.7rem;color:var(--rose-dark);text-transform:uppercase}
+.loader-text{margin-top:1rem;letter-spacing:.5em;font-family:'Jost',sans-serif;font-size:1rem;color:var(--rose-dark);text-transform:uppercase}
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* ---------- Navbar ---------- */
