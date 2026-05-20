@@ -786,13 +786,19 @@ section{padding:7rem 0; position:relative;
 }
 /* ---------- Floating WA ---------- */
 .fab-wa{
-  position:fixed;bottom:30px;right:30px;width:60px;height:60px;border-radius:50%;
+  position:fixed;bottom:30px;right:30px;width:50px;height:50px;border-radius:50%;
   background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;
   font-size:1.7rem;box-shadow:0 15px 40px -10px rgba(37,211,102,.5);z-index:999;
   animation:pulse 2.5s ease-in-out infinite;
 }
+.fab-insta{
+  position:fixed;bottom:30px;right:100px;width:50px;height:50px;border-radius:50%;
+  background:rgb(196, 27, 103);color:#fff;display:flex;align-items:center;justify-content:center;
+  font-size:1.7rem;box-shadow:0 15px 40px -10px rgba(196,27,102,.5);z-index:999;
+  animation:pulse 2.5s ease-in-out infinite;
+}
 .fab-wa:hover{color:#fff;transform:scale(1.1)}
-@keyframes pulse{0%,100%{box-shadow:0 15px 40px -10px rgba(37,211,102,.5),0 0 0 0 rgba(37,211,102,.4)}50%{box-shadow:0 15px 40px -10px rgba(37,211,102,.5),0 0 0 20px rgba(37,211,102,0)}}
+/* @keyframes pulse{0%,100%{box-shadow:0 15px 40px -10px rgba(37,211,102,.5),0 0 0 0 rgba(37,211,102,.4)}50%{box-shadow:0 15px 40px -10px rgba(37,211,102,.5),0 0 0 20px rgba(37,211,102,0)}} */
 
 .back-top{
   position:fixed;bottom:30px;left:30px;width:46px;height:46px;border-radius:50%;
