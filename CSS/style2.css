@@ -1,5 +1,5 @@
 /* ===================================================
-   Creative Homes by Sanjana — Luxury Brand Stylesheet
+   Sharon Makeovers — Luxury Brand Stylesheet
    Palette: Beige, White, Gold, Pastel Blue
 =================================================== */
 
@@ -322,7 +322,7 @@ section{padding:7rem 0; position:relative;
 .type-cursor{display:inline-block;width:2px;background:var(--gold);height:1em;margin-left:6px;animation:blink 1s infinite;vertical-align:middle}
 @keyframes blink{50%{opacity:0}}
 
-/* Floating resin elements */
+/* Floating elements */
 .float-el{
   position:absolute;
 
@@ -372,6 +372,15 @@ section{padding:7rem 0; position:relative;
 /* ---------- Glass card ---------- */
 .glass{
   background:rgba(255,250,242,.55);
+  backdrop-filter:blur(20px) saturate(160%);
+  -webkit-backdrop-filter:blur(20px) saturate(160%);
+  border:1px solid rgba(255,255,255,.6);
+  border-radius:24px;
+  box-shadow:var(--shadow-soft);
+}
+
+.glass2{
+  background:var(--gold-light);
   backdrop-filter:blur(20px) saturate(160%);
   -webkit-backdrop-filter:blur(20px) saturate(160%);
   border:1px solid rgba(255,255,255,.6);
@@ -818,7 +827,7 @@ section{padding:7rem 0; position:relative;
   padding:11rem 0 5rem;background:var(--grad-main);text-align:center;position:relative;overflow:hidden;
 }
 .page-header h1{font-size:clamp(2.5rem,5vw,4.5rem);font-weight:400;margin-bottom:.5rem}
-.page-header .breadcrumb{justify-content:center;background:none;padding:0;font-family:'Jost',sans-serif;font-size:.75rem;letter-spacing:.3em;text-transform:uppercase}
+.page-header .breadcrumb{justify-content:center;background:none;padding:0;font-family:'Jost',sans-serif;font-size:1rem;letter-spacing:.3em;text-transform:uppercase}
 .page-header .breadcrumb a{color:var(--gold-dark)}
 
 /* ---------- Service cards ---------- */
@@ -855,7 +864,7 @@ section{padding:7rem 0; position:relative;
 
 /* ---------- Gallery ---------- */
 .filter-btn{
-  background:transparent;border:1px solid var(--beige-200);color:var(--ink);
+  background:transparent;border:1px solid var(--rose-dark);color:var(--ink);
   padding:.5rem 1.5rem;border-radius:50px;font-family:'Jost',sans-serif;
   font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;margin:.2rem;
   transition:all .3s;
@@ -868,6 +877,24 @@ section{padding:7rem 0; position:relative;
   break-inside:avoid;margin-bottom:1rem;border-radius:18px;overflow:hidden;
   position:relative;cursor:pointer;box-shadow:var(--shadow-soft);
   transition:transform .5s, opacity .4s;
+}
+.gallery-overlay{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:20px;
+  background:linear-gradient(to top, rgba(0,0,0,.7), transparent);
+  color:#fff;
+  opacity:0;
+  transition:.4s;
+}
+
+.gallery-overlay h5, span{
+  color: white;
+}
+.m-item:hover .gallery-overlay{
+  opacity:0.5;
 }
 .masonry .m-item img{width:100%;display:block;transition:transform 1s}
 .masonry .m-item:hover img{transform:scale(1.08)}
@@ -907,8 +934,8 @@ section{padding:7rem 0; position:relative;
 /* ---------- Forms ---------- */
 .form-luxe .form-floating > .form-control,
 .form-luxe .form-floating > .form-select{
-  background:rgba(255,255,255,.6);backdrop-filter:blur(10px);
-  border:1px solid var(--beige-200);border-radius:16px;
+  background:white;backdrop-filter:blur(10px);
+  border:1px solid var(--rose-dark);border-radius:16px;
   font-family:'Jost',sans-serif;font-size:.95rem;padding:1.2rem 1.2rem .5rem;
   height:auto;min-height:60px;
 }

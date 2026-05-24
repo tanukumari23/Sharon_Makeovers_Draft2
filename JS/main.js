@@ -1,5 +1,5 @@
 // ===================================================
-// Creative Homes by Sanjana — Interactive JS
+// Sharon Makeovers — Interactive JS
 // ===================================================
 (function(){
   'use strict';
