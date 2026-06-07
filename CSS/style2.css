@@ -319,7 +319,7 @@ section{padding:7rem 0; position:relative;
 }
 .hero h1 .display{display:block;font-size:1.15em;color:var(--gold-dark)}
 .hero p.lead{font-size:1.25rem;color:var(--muted);max-width:540px;font-weight:300;font-style:italic}
-.type-cursor{display:inline-block;width:2px;background:var(--gold);height:1em;margin-left:6px;animation:blink 1s infinite;vertical-align:middle}
+.type-cursor{display:inline-block;width:2px;background:var(--rose-dark);height:1em;margin-left:6px;animation:blink 1s infinite;vertical-align:middle}
 @keyframes blink{50%{opacity:0}}
 
 /* Floating elements */
@@ -349,6 +349,7 @@ section{padding:7rem 0; position:relative;
 }
 
 .hero-visual{
+  height: 700px;
   position:relative;border-radius:30px;overflow:hidden;
   transform:perspective(1000px) rotateY(-5deg);
 }
@@ -450,6 +451,7 @@ section{padding:7rem 0; position:relative;
 
 /* ---------- Why us ---------- */
 .feature{
+  height: 340px;
   text-align:center;
 
   padding:2.7rem 1.7rem;
@@ -487,7 +489,7 @@ section{padding:7rem 0; position:relative;
   padding:2.5rem;border-radius:24px;text-align:center; background: linear-gradient(135deg, rgb(216, 166, 177) 0%, rgb(190, 167, 234) 100%);;
 }
 .testimonial .quote{font-family:'Playfair Display',serif;font-style:italic;font-size:1.3rem;color:black;line-height:1.6;margin-bottom:1.5rem}
-.testimonial .stars{color:gold;letter-spacing:.2em;margin-bottom:1rem}
+.testimonial .stars{color:gold;letter-spacing:.2em;margin-bottom:1rem;font-size: 30px;}
 .testimonial .author{font-family:'Playfair Display',serif;font-size:1.05rem;color:#B67E6E}
 .testimonial .role{font-family:'Jost',sans-serif;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
 
@@ -837,7 +839,7 @@ section{padding:7rem 0; position:relative;
   display:flex;flex-direction:column;
 }
 .service-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-deep)}
-.service-card .img-wrap{aspect-ratio:4/3;overflow:hidden}
+.service-card .img-wrap{height: 350px;overflow:hidden}
 .service-card img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
 .service-card:hover img{transform:scale(1.08)}
 .service-card .body{padding:2rem;flex:1;display:flex;flex-direction:column}
@@ -1016,3 +1018,18 @@ section{padding:7rem 0; position:relative;
 .map-wrap iframe{width:100%;height:100%;border:0;display:block;min-height:400px}
 
 /* Responsive helpers in style file already; responsive.css adds more */
+
+
+
+
+
+
+/* https://wa.me/919899167781 */
+
+
+/* 
+    <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+      <a href="enquiry.html" class="btn btn-luxe">Start Enquiry</a>
+      <a href="https://wa.me/919899167781" target="_blank" class="btn btn-ghost"><i class="fa-brands fa-whatsapp me-2"></i>WhatsApp</a>
+    </div>
+   */
