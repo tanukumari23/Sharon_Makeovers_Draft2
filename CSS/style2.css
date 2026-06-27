@@ -773,6 +773,9 @@ section{padding:7rem 0; position:relative;
 
 @media(max-width:768px){
 
+  .about-img{
+        height: 300px; /* Adjust as needed */
+    }
   .footer{
     text-align:center;
     padding:4rem 0 2rem;
@@ -821,7 +824,7 @@ section{padding:7rem 0; position:relative;
 .back-top:hover{background:var(--gold);color:#fff}
 
 /* ---------- Reveal on scroll ---------- */
-.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease, transform .8s ease}
+.reveal{transform:translateY(40px);transition:opacity .8s ease, transform .8s ease}
 .reveal.in{opacity:1;transform:none}
 
 /* ---------- Page header ---------- */
@@ -907,7 +910,10 @@ section{padding:7rem 0; position:relative;
   opacity:0;transition:opacity .4s;font-size:1.4rem;
 }
 .masonry .m-item:hover::after{opacity:1}
-.masonry .m-item.hide{display:none}
+/* .masonry .m-item.hide{display:none} */
+.m-item.hide{
+    display:none !important;
+}
 
 /* Lightbox */
 .lightbox{
@@ -1033,3 +1039,18 @@ section{padding:7rem 0; position:relative;
       <a href="https://wa.me/919899167781" target="_blank" class="btn btn-ghost"><i class="fa-brands fa-whatsapp me-2"></i>WhatsApp</a>
     </div>
    */
+
+
+   .about-img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px){
+    .about-img{
+        height: 300px; /* Adjust as needed */
+    }
+}
+
+

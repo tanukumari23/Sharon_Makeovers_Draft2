@@ -98,15 +98,25 @@
   }
 
   // ---------- Gallery filter + lightbox ----------
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  filterBtns.forEach(b => b.addEventListener('click', () => {
-    filterBtns.forEach(x=>x.classList.remove('active'));
-    b.classList.add('active');
-    const f = b.dataset.filter;
-    document.querySelectorAll('.m-item').forEach(item => {
-      item.classList.toggle('hide', !(f==='all' || item.dataset.cat===f));
-    });
-  }));
+const filterBtns = document.querySelectorAll('.filter-btn');
+const galleryItems = document.querySelectorAll('.m-item');
+
+function filterGallery(filter) {
+  galleryItems.forEach(item => {
+    item.classList.toggle('hide', !(filter === 'all' || item.dataset.cat === filter));
+  });
+}
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    filterGallery(btn.dataset.filter);
+  });
+});
+
+// Show all images on page load
+filterGallery('all');
 
   const lb = document.querySelector('.lightbox');
   const lbImg = document.querySelector('.lightbox img');
