@@ -1054,3 +1054,97 @@ section{padding:7rem 0; position:relative;
 }
 
 
+
+
+.carousel-item{
+    position:relative;
+}
+
+
+
+.review-caption{
+    position:absolute;
+    bottom:35px;
+    left:35px;
+    color:#fff;
+    z-index:5;
+}
+
+.testimonial img{
+    width:100%;
+    border-radius:24px;
+    object-fit:cover;
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.15);
+}
+
+.testimonial{
+    position:relative;
+}
+
+.testimonial::before{
+    content:"❝";
+    position:absolute;
+    top:10px;
+    left:25px;
+    font-size:70px;
+    opacity:.12;
+    color:white;
+}
+
+.quote{
+    position:relative;
+    padding:20px;
+}
+
+.quote::before{
+    content:"“";
+    position:absolute;
+    left:-5px;
+    top:-10px;
+    font-size:50px;
+    color:#ffffff55;
+}
+
+.testimonial{
+
+transition:.45s;
+}
+
+.testimonial:hover{
+
+transform:
+translateY(-12px)
+scale(1.02);
+
+box-shadow:
+0 30px 70px rgba(190,167,234,.28);
+}
+
+.glass{
+
+transition:.4s;
+}
+
+.glass:hover{
+
+transform:translateY(-10px);
+
+background:white;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+
+width:55px;
+height:55px;
+
+top:50%;
+transform:translateY(-50%);
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:0 15px 30px rgba(0,0,0,.1);
+}

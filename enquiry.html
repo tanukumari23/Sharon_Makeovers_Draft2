@@ -44,7 +44,7 @@
 
 <section>
   <div class="container" style="max-width:860px">
-    <form class="form-luxe glass2 p-4 p-md-5 reveal" data-progress>
+    <form id="bookingForm" class="form-luxe glass2 p-4 p-md-5 reveal" data-progress>
       <div class="d-flex justify-content-between align-items-center mb-2">
         <div class="eyebrow" style="font-size: large;">Tell us about your event</div>
         <small class="sans" style="color:var(--muted)">Step progress</small>
@@ -52,9 +52,9 @@
       <div class="progress-luxe mb-4"><div class="bar"></div></div>
 
       <div class="row g-3">
-        <div class="col-md-6"><div class="form-floating"><input type="text" class="form-control" id="fn" placeholder="Name" required><label for="fn">Full name</label></div></div>
-        <div class="col-md-6"><div class="form-floating"><input type="tel" class="form-control" id="fp" placeholder="Phone" required><label for="fp">WhatsApp number</label></div></div>
-        <div class="col-md-6"><div class="form-floating"><select class="form-select" id="occ" required>
+        <div class="col-md-6"><div class="form-floating"><input name="name" type="text" class="form-control" id="fn" placeholder="Name" required><label for="fn">Full name</label></div></div>
+        <div class="col-md-6"><div class="form-floating"><input name="phone" type="tel" class="form-control" id="fp" placeholder="Phone" required><label for="fp">WhatsApp number</label></div></div>
+        <div class="col-md-6"><div class="form-floating"><select name="occasion" class="form-select" id="occ" required>
         <option>Bridal Makeup</option>
         <option>Engagement Makeup</option>
         <option>Reception Makeup</option>
@@ -66,7 +66,7 @@
         </select><label for="occ">Occasion</label></div></div>
         <div class="col-md-6">
   <div class="form-floating">
-    <select class="form-select" id="cat" required>
+    <select class="form-select" name="service" id="cat" required>
       <option value="">Select...</option>
       <option>Soft Glam Bridal</option>
       <option>HD Bridal Makeup</option>
@@ -81,13 +81,13 @@
     <label for="cat">Service Required</label>
   </div>
 </div>
-        <div class="col-md-6"><div class="form-floating"><input type="date" class="form-control" id="dt" required><label for="dt">Required by</label></div></div>
-        <div class="col-md-6"><div class="form-floating"><input type="text" class="form-control" id="bd" placeholder="Budget"><label for="bd">Preferred package budget (₹)</label></div></div>
-        <div class="col-12">
-          <label class="sans mb-1" style="font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--rose-dark)">Upload your inspiration look</label>
-          <input type="file" class="form-control" accept="image/*">
-        </div>
-        <div class="col-12"><div class="form-floating"><textarea class="form-control" id="dt2" placeholder="Details"></textarea><label for="dt2">Event details · outfit colors · preferred look · venue</label></div></div>
+        <div class="col-md-6"><div class="form-floating"><input name="required_date" type="date" class="form-control" id="dt" required><label for="dt">Required by</label>
+        <input type="hidden" name="action" value="booking">
+      </div></div>
+        
+        <div class="col-md-6"><div class="form-floating"><input name="budget" type="text" class="form-control" id="bd" placeholder="Budget"><label for="bd">Preferred package budget (₹)</label></div></div>
+        
+        <div class="col-12"><div class="form-floating"><textarea name="details" class="form-control" id="dt2" placeholder="Details"></textarea><label for="dt2">Event details · outfit colors · preferred look · venue</label></div></div>
       </div>
 
       <div class="d-flex justify-content-between align-items-center mt-4 flex-wrap gap-3">
@@ -144,5 +144,37 @@ Limited bridal bookings accepted each month to ensure every bride receives a per
 <button class="back-top"><i class="fa-solid fa-arrow-up"></i></button>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="JS/main.js"></script>
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbyh1u4L1YzNDx8a1TMwiXLJ2EA86lC0gsed1O0r_7MlJzsiMKS0zK5SnimzUALq5sJS/exec";
+
+  
+const form = document.getElementById("bookingForm");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    fetch(scriptURL,{
+        method:"POST",
+        body:new FormData(form)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+
+        alert("Your enquiry has been submitted successfully!");
+
+        form.reset();
+
+    })
+    .catch(err=>{
+
+        console.log(err);
+
+        alert("Something went wrong.");
+
+    });
+
+});
+</script>
 </body>
 </html>

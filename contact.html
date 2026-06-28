@@ -26,8 +26,8 @@
         <li class="nav-item"><a class="nav-link " href="gallery.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="testimonials.html">Reviews</a></li>
         <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">Contact</a></li>
-        <li class="nav-item ms-lg-3"><a class="btn btn-luxe fw-bold" href="enquiry.html">Enquire Now</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-3"><a class="btn btn-luxe active text-white fw-bold" href="enquiry.html">Enquire Now</a></li>
       </ul>
     </div>
   </div>
@@ -53,18 +53,21 @@
 
     <div class="row g-4">
       <div class="col-lg-6 reveal">
-        <form class="form-luxe glass p-4 p-md-5">
+        <form class="form-luxe glass p-4 p-md-5" id="contactForm">
           <div class="eyebrow">Send a message</div>
           <h3 class="mt-2 mb-4">Write to us</h3>
           <p>Whether you're booking for your wedding, engagement, reception or a special occasion — we'd love to hear about your big day.
 </p>
-          <div class="form-floating mb-3"><input type="text" class="form-control" id="n" placeholder="Name" required><label for="n">Your name</label></div>
+          <div class="form-floating mb-3"><input type="text" name="name" class="form-control" id="n" placeholder="Name" required><label for="n">Your name</label>
+          <input type="hidden" name="action" value="contact">
+        </div>
+          
           <div class="row">
-            <div class="col-md-6"><div class="form-floating mb-3"><input type="email" class="form-control" id="e" placeholder="Email" required><label for="e">Email</label></div></div>
-            <div class="col-md-6"><div class="form-floating mb-3"><input type="tel" class="form-control" id="ph" placeholder="Phone" required><label for="ph">Phone</label></div></div>
+            <div class="col-md-6"><div class="form-floating mb-3"><input type="email" name="email" class="form-control" id="e" placeholder="Email" required><label for="e">Email</label></div></div>
+            <div class="col-md-6"><div class="form-floating mb-3"><input type="tel" name="phone" class="form-control" id="ph" placeholder="Phone" required><label for="ph">Phone</label></div></div>
           </div>
-          <div class="form-floating mb-3"><input type="text" class="form-control" id="s" placeholder="Subject"><label for="s">Subject</label></div>
-          <div class="form-floating mb-3"><textarea class="form-control" id="m" placeholder="Message"></textarea><label for="m">Your message</label></div>
+          <div class="form-floating mb-3"><input type="text" name="subject" class="form-control" id="s" placeholder="Subject"><label for="s">Subject</label></div>
+          <div class="form-floating mb-3"><textarea name="message" class="form-control" id="m" placeholder="Message"></textarea><label for="m">Your message</label></div>
           <button type="submit" class="btn btn-luxe w-100">Send Message</button>
         </form>
       </div>
@@ -143,5 +146,43 @@
 <button class="back-top"><i class="fa-solid fa-arrow-up"></i></button>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="JS/main.js"></script>
+<script>
+
+const scriptURL =
+"https://script.google.com/macros/s/AKfycbyh1u4L1YzNDx8a1TMwiXLJ2EA86lC0gsed1O0r_7MlJzsiMKS0zK5SnimzUALq5sJS/exec";
+
+const form =
+document.getElementById("contactForm");
+
+form.addEventListener("submit", e=>{
+
+e.preventDefault();
+
+fetch(scriptURL,{
+method:"POST",
+body:new FormData(form)
+})
+
+.then(res=>res.json())
+
+.then(data=>{
+
+alert("Thank you! We have received your enquiry.");
+
+form.reset();
+
+})
+
+.catch(error=>{
+
+alert("Something went wrong.");
+
+console.log(error);
+
+});
+
+});
+
+</script>
 </body>
 </html>
