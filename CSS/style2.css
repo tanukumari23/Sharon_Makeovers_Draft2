@@ -425,7 +425,7 @@ section{padding:7rem 0; position:relative;
 .marquee{overflow:hidden;position:relative;padding:1rem 0}
 .marquee-track{display:flex;gap:1.5rem;width:max-content;animation:scroll-x 40s linear infinite}
 .marquee:hover .marquee-track{animation-play-state:paused}
-.marquee-card{width:300px;flex-shrink:0}
+.marquee-card{width:350px;flex-shrink:0}
 @keyframes scroll-x{to{transform:translateX(-50%)}}
 
 /* ---------- Categories ---------- */

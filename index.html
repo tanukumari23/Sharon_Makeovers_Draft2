@@ -11,7 +11,45 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="CSS/style2.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 <link rel="stylesheet" href="CSS/responsive.css">
+<style>
+  .servicesSwiper{
+    padding:20px 45px 60px;
+}
+
+.swiper-slide{
+    height:auto;
+}
+
+.product-card{
+    height:100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+
+    width:45px;
+    height:45px;
+
+    background:#fff;
+    border-radius:50%;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size:18px;
+    color:#000;
+}
+
+.swiper-pagination{
+    margin-top:20px;
+}
+</style>
 </head>
 <body>
 
@@ -86,7 +124,11 @@
         <div class="eyebrow">About Rebecca Megha Gomes</div>
         <h2 class="mt-3">Creating bridal looks that feel <span class="display gold-text">Soft, Real & Timeless.</span></h2>
         <span class="divider mx-0"></span>
-        <p class="mt-3">At Sharon Makeovers, every bride is treated with warmth, comfort and attention to detail. Our signature soft glam style enhances your features naturally — so you still look like yourself, just more radiant and confident on your special day.</p>
+        <p class="mt-3">Every bride tells me the same thing - "I want naturat makeup, but I still want to look special."</p>
+        <p class="mt-3">And honestly, that's my favourite brief.</p>
+        <p class="mt-3">I believe bridal makeup should never hide you. Whether you have textured skin, uneven skin tone, acne marks or features you've always been concious about, my job is to make you feel confident - not covered up. </p>
+        <p class="mt-3">When you sit in my chair, I want you to feel understood, confortable and completely yourself.</p>
+
         <a href="about.html" class="btn btn-ghost mt-3">Read My Journey</a>
       </div>
       <div class="col-lg-6 reveal">
@@ -111,11 +153,15 @@
     </div>
   </div>
 
-  <div class="marquee">
-    <div class="marquee-track">
 
-      <!-- Card 1 -->
-      <div class="product-card marquee-card">
+
+  <div class="swiper servicesSwiper">
+
+    <div class="swiper-wrapper">
+
+        <!-- Card 1 -->
+        <div class="swiper-slide">
+            <div class="product-card marquee-card">
         <div class="img-wrap">
           <img src="Images\IMG_3155.JPG.jpeg" alt="">
           <!-- Images\IMG_3178.JPG.jpeg -->
@@ -126,9 +172,11 @@
           <div class="price">Starting ₹18,000</div>
         </div>
       </div>
+        </div>
 
-      <!-- Card 2 -->
-      <div class="product-card marquee-card">
+        <!-- Card 2 -->
+        <div class="swiper-slide">
+            <div class="product-card marquee-card">
         <div class="img-wrap">
           <img src="Images\IMG_3149.jpg.jpeg" alt="">
         </div>
@@ -138,11 +186,13 @@
           <div class="price">Starting ₹22,000</div>
         </div>
       </div> 
+        </div>
 
-      <!-- Card 3 -->
-      <div class="product-card marquee-card">
+        <!-- Card 3 -->
+          <div class="swiper-slide">
+            <div class="product-card marquee-card">
         <div class="img-wrap">
-          <img src="Images\IMG_3178.JPG.jpeg" alt="">
+          <img src="Images\image.png" alt="">
         </div>
         <div class="body">
           <div class="meta">Bridal Wedding Makeup</div>
@@ -150,9 +200,10 @@
           <div class="price">Starting ₹30,000</div>
         </div>
       </div> 
-
-      <!-- Card 4 -->
-      <div class="product-card marquee-card">
+          </div>
+        <!-- Card 4 -->
+         <div class="swiper-slide">
+           <div class="product-card marquee-card">
         <div class="img-wrap">
           <img src="Images\IMG_3182.JPG.jpeg" alt="">
         </div>
@@ -162,9 +213,10 @@
           <div class="price">Starting ₹25,000</div>
         </div>
       </div> 
-
-      <!-- Card 5 -->
-       <div class="product-card marquee-card">
+          </div>
+        <!-- Card 5 -->
+         <div class="swiper-slide">
+          <div class="product-card marquee-card">
         <div class="img-wrap">
           <img src="Images\IMG_3158.JPG.jpeg" alt="">
         </div>
@@ -174,12 +226,12 @@
           <div class="price">Starting ₹18,000</div>
         </div>
       </div> 
-    
-
-      <!-- Card 6 -->
-        <div class="product-card marquee-card">
+          </div>
+        <!-- Card 6 -->
+         <div class="swiper-slide">
+          <div class="product-card marquee-card">
         <div class="img-wrap">
-          <img src="" alt="">
+          <img src="Images/WhatsApp Image 2026-07-14 at 9,33,43 PM-Picsart-AiImageEnhancer.jpeg" alt="">
         </div>
         <div class="body">
           <div class="meta">Groom Makeup</div>
@@ -187,84 +239,21 @@
          <div class="price">Starting ₹7,000</div>
         </div>
       </div> 
-
-      <!-- Repeat for smooth marquee -->
-
-      <!-- Card 1 -->
-      <div class="product-card marquee-card">
-        <div class="img-wrap">
-          <img src="Images\IMG_3155.JPG.jpeg" alt="">
-        </div>
-        <div class="body">
-          <div class="meta">Haldi / Mehendi Makeup</div>
-          <h5>Fresh & Radiant Look</h5>
-          <div class="price">Starting ₹18,000</div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="product-card marquee-card">
-        <div class="img-wrap">
-          <img src="Images\IMG_3149.jpg.jpeg" alt="">
-        </div>
-        <div class="body">
-          <div class="meta">Sangeet / Engagement Makeup</div>
-          <h5>Glam Celebration Look</h5>
-          <div class="price">Starting ₹22,000</div>
-        </div>
-      </div> 
-
-      <!-- Card 3 -->
-      <div class="product-card marquee-card">
-        <div class="img-wrap">
-          <img src="Images\IMG_3178.JPG.jpeg" alt="">
-        </div>
-        <div class="body">
-          <div class="meta">Bridal Wedding Makeup</div>
-          <h5>Elegant Bridal Glow</h5>
-          <div class="price">Starting ₹30,000</div>
-        </div>
-      </div> 
-
-      <!-- Card 4 -->
-      <div class="product-card marquee-card">
-        <div class="img-wrap">
-          <img src="Images\IMG_3182.JPG.jpeg" alt="">
-        </div>
-        <div class="body">
-          <div class="meta">Reception Makeup</div>
-          <h5>Evening Luxe Glam</h5>
-          <div class="price">Starting ₹25,000</div>
-        </div>
-      </div> 
-
-      <!-- Card 5 -->
-         <div class="product-card marquee-card">
-        <div class="img-wrap">
-          <img src="Images\IMG_3158.JPG.jpeg" alt="">
-        </div>
-        <div class="body">
-          <div class="meta">Bridal Touch-up</div>
-          <h5>Stay Fresh All Day</h5>
-          <div class="price">Starting ₹18,000</div>
-        </div>
-      </div> 
-      
-
-      <!-- Card 6 -->
-    <div class="product-card marquee-card">
-        <div class="img-wrap">
-          <img src="" alt="">
-        </div>
-        <div class="body">
-          <div class="meta">Groom Makeup</div>
-          <h5>Natural Groom Styling</h5>
-          <div class="price">Starting ₹7,000</div>
-        </div>
-      </div> 
+          </div>
 
     </div>
-  </div>
+
+    <!-- Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+
+</div>
+
+
+
 </section>
 
 <!-- Categories -->
@@ -475,6 +464,52 @@
 <button class="back-top" aria-label="Top"><i class="fa-solid fa-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="JS/main.js"></script>
+<script>
+  const swiper = new Swiper(".servicesSwiper", {
+
+    loop: true,
+
+    spaceBetween: 25,
+
+    slidesPerView: 1,
+    autoplay: {
+    delay: 3000,
+    pauseOnMouseEnter: true,
+},
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+
+        576: {
+            slidesPerView: 1,
+        },
+
+        768: {
+            slidesPerView: 2,
+        },
+
+        992: {
+            slidesPerView: 3,
+        },
+
+        1200: {
+            slidesPerView: 4,
+        }
+
+    }
+
+});
+</script>
 </body>
 </html>
