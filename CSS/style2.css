@@ -1051,7 +1051,22 @@ section{padding:7rem 0; position:relative;
     .about-img{
         height: 300px; /* Adjust as needed */
     }
+    .testimonial .quote{font-family:'Playfair Display',serif;font-style:italic;font-size:12px;color:black;line-height:1.6;margin-bottom:1.5rem}
+
+     .quote-block{
+  text-align:center;padding:2rem 2rem;max-width:800px;margin:0 auto;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;
+  color:var(--ink);position:relative;
 }
+/*
+.quote-block::before{
+  content:'"';position:absolute;top:-2rem;left:50%;transform:translateX(-50%);
+  font-size:12px;color:var(--gold-light);font-family:Georgia,serif;line-height:1;
+}
+.quote-block cite{display:block;margin-top:1.5rem;font-size:.9rem;letter-spacing:.3em;text-transform:uppercase;color:var(--rose-dark);font-style:normal;font-family:'Jost',sans-serif}
+
+ */
+ }
 
 
 
