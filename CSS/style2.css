@@ -167,7 +167,7 @@ section{padding:7rem 0; position:relative;
 .loader{
   position:fixed;inset:0;background:#EEE4FF;z-index:2000;
   display:flex;align-items:center;justify-content:center;flex-direction:column;
-  transition:opacity .3s ease, visibility .3s ease;
+  transition:opacity .8s ease, visibility .8s ease;
 }
 .loader.hidden{opacity:0;visibility:hidden}
 .loader-ring{
@@ -1162,4 +1162,12 @@ background:white;
 border-radius:50%;
 
 box-shadow:0 15px 30px rgba(0,0,0,.1);
+}
+img {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #f8f8f8 50%,
+        #f0f0f0 75%
+    );
 }
