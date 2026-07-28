@@ -5,10 +5,11 @@
   'use strict';
 
   // ---------- Loader ----------
-  window.addEventListener('load', () => {
-    const loader = document.querySelector('.loader');
-    if (loader) setTimeout(() => loader.classList.add('hidden'), 600);
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.querySelector(".loader")?.classList.add("hidden");
+  }, 500);
+});
 
   // ---------- Custom cursor ----------
   const dot = document.querySelector('.cursor-dot');

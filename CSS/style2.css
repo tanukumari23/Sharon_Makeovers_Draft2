@@ -167,7 +167,7 @@ section{padding:7rem 0; position:relative;
 .loader{
   position:fixed;inset:0;background:#EEE4FF;z-index:2000;
   display:flex;align-items:center;justify-content:center;flex-direction:column;
-  transition:opacity .8s ease, visibility .8s ease;
+  transition:opacity .3s ease, visibility .3s ease;
 }
 .loader.hidden{opacity:0;visibility:hidden}
 .loader-ring{
